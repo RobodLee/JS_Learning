@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>22-数据类型转换</title>
+    <script>
+        //一、转换为字符串
+        //1.  toString()
+        var a = 10;
+        console.log(typeof a.toString());
+        //2.  String(xxx)
+        var b = 20;
+        console.log(typeof String(b));
+        //3.  + 拼接    （常用）
+        var c = 30;
+        console.log(typeof (c+''));
+
+        //二、转换为数字型
+        //1.parseInt(String)函数,得到的是整数
+        console.log(parseInt('3.14'));  //3
+        console.log(parseInt('120px'))  //120 会去掉后面的单位px
+        //2.parseFloat(String)函数，得到的是小数
+        console.log(parseFloat('3.14'));    //3.14
+        console.log(parseFloat('120px'))  //120 会去掉后面的单位px
+        //3.Number(xxx) 强制转换函数  整数和小数都可以
+        console.log(Number('333'));
+        console.log(Number('3.14'));
+        //4.算数运算 - * /   隐式转换
+        console.log(typeof ('12'-0));
+        console.log(typeof ('12' / '2'));
+
+        //转换为布尔型
+        //Boolean(xxx)函数 代表空，否定的值会转成false，如'',0,NaN,null,undefined
+        //其余的都会被转成true
+        console.log(Boolean(''));
+        console.log(Boolean(NaN));
+        console.log(Boolean('fads'));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
