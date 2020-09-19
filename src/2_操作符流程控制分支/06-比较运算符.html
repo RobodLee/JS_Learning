@@ -5,20 +5,21 @@
     <title>06-比较运算符</title>
     <script>
         /**
-         * <
-         * >
-         * >=
-         * <=
+         * <            String可以可Number比较
+         * >            String可以可Number比较
+         * >=           String可以可Number比较
+         * <=           String可以可Number比较
          * ==           判等号(会转型),只要值一样就是true
          * !=
-         * ===   !==    全等，要求值和数据类型都一致
+         * ===   !==    全等 / 非全等，要求值和数据类型都一致
          */
 
         // == 默认会转换类型
         console.log(18 == '18');    //true
-
         // ===
         console.log(18 === '18');   //false
+
+        console.log(18 !== '18');   //true
     </script>
 </head>
 <body>

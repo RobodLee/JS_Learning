@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>12-作用域链</title>
+    <script>
+        //js方法可以嵌套，可以在方法里声明方法
+        var num = 10;
+        function a() {      //外部函数
+            var num = 20;
+            b();
+            function b() {  //内部函数
+                //内部函数访问外部函数的变量采取的是链式查找的方式，这种结构叫做作用域链
+                console.log(num);   //20
+            }
+        }
+        a()
+        console.log(num);   //10
+    </script>
+</head>
+<body>
+
+</body>
+</html>

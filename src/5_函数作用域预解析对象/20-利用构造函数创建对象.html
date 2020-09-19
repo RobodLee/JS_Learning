@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>20-利用构造函数创建对象</title>
+    <script>
+        /**
+         *      function 构造函数名(参数1,参数2) {
+         *          this.属性1 = 参数1;
+         *          this.属性2 = 参数2;
+         *          this.方法 = function(){}
+         *      }
+         */
+        function Person(name,age,say) {
+            this.name = name;
+            this.age = age;
+            this.saySth = function () {
+                console.log(say);
+                console.log(this.name);
+            }
+        }
+
+        var robod = new Person('robod',18,'哈哈哈');
+        robod.saySth();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

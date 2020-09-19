@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>09-JavaScript作用域</title>
+    <script>
+        //1.全局变量：在全局作用域下声明的是全局变量；
+        //          在函数内部未声明直接赋值的也是全局变量
+        var num1 = 10;      //全局变量
+        console.log(num1);
+        function hahaha() {
+            var num2 = 20;  //局部变量
+            console.log(num2);
+            num3 = 50;      //全局变量
+        }
+        hahaha();
+        console.log(num3);  //不去调用hahaha()函数，num3就被赋值，报错
+
+        if (3<5) {
+            var num5 = 0;   //var没有块级作用域的概念，num5是全局变量
+            let num6 = 0;   //块级变量，外部不能访问
+            console.log(num6);
+        }
+        console.log(num5);
+        console.log(num6);  //报错
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>07-新增数组元素</title>
+    <script>
+        //js的数组是可以动态扩容的
+        //1.修改数组的length值
+        var arr = [1,2,3];
+        arr.length = 10;    //现在数组的长度就变成了10，没有赋值的就变成了undefined
+        //2.修改索引号，追加数组元素
+        arr[20] = 8;
+        console.log(arr);           //没赋值的是undefined
+        console.log(arr.length);    //21
+    </script>
+</head>
+<body>
+
+</body>
+</html>

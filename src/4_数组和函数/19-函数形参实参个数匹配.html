@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>19-函数形参实参个数匹配</title>
+    <script>
+        function getSum(num1,num2) {
+            alert(num1 + num2);
+        }
+        //实参个数小于形参，多的形参会被定义为undefined
+        getSum(1);  //NaN
+
+        //实参个数大于形参，多的实参会被省略
+        getSum(1, 2, 3);  //3
+    </script>
+</head>
+<body>
+
+</body>
+</html>
