@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>02-getElementsByTagName获取某些元素</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ol>
+        <li>1.</li>
+        <li>2.</li>
+        <li>3.</li>
+        <li>4.</li>
+        <li>5.</li>
+    </ol>
+    <script>
+        //返回获取的对象集合，以伪数组表示
+        var lis = document.getElementsByTagName('li');//获取页面上所有的li元素，10个
+        console.log(lis);
+
+        //获取了一个element集合对象，伪数组，只有一个ol元素
+        var ols = document.getElementsByTagName('ol');
+        console.log(ols);
+        //element.getElementsByTagName()
+        var olLis = ols[0].getElementsByTagName('li');      //获取ol里面的li元素集合，5个
+        console.log(olLis);
+    </script>
+</body>
+</html>

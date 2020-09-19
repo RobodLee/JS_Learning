@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>15-数组排序</title>
+    <script>
+        var arr = [1,2,100,4,5,26,17,8,9];
+        console.log(arr.reverse())      //reverse()方法翻转数组
+
+        console.log(arr.sort());    //sort默认的排序规则是先根据第一位数排序，再根据第二位数排序 [1, 100, 17, 2, 26, 4, 5, 8, 9]
+        arr.sort(function (a,b) {
+            //return a-b; //升序
+            return b-a;     //降序
+        })
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

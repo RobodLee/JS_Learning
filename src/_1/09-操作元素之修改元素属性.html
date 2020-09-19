@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>09-操作元素之修改元素属性</title>
+</head>
+<body>
+    <button>按钮</button>
+    <img src="https://gitee.com/RobodLee/image_store/raw/master/微信公众号.png" title="微信公众号">
+    <script>
+        var x = 0;
+        var btn = document.querySelector('button');
+        var img = document.querySelector('img');
+        btn.onclick = function () {
+            if (++x % 2) {
+                img.src = 'https://gitee.com/RobodLee/image_store/raw/master/QRcode2.0.png';
+                img.title = 'QRcode2.0';
+            } else {
+                img.src = 'https://gitee.com/RobodLee/image_store/raw/master/微信公众号.png';
+                img.title = '微信公众号';
+            }
+        }
+    </script>
+</body>
+</html>

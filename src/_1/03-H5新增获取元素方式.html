@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>03-H5新增获取元素方式</title>
+</head>
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+    <script>
+        //1.document.getElementsByClassName('类名') 通过类名获取元素集合，伪数组，h5新增的方法
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+
+        //2.document.querySelector()  根据指定的选择器返回第一个元素对象
+        console.log(document.querySelector(".box")); //盒子1   .box是类选择器
+        console.log(document.querySelector('#nav')); //id选择器
+        console.log(document.querySelector('li'));  //<li>1</li>
+
+        //3.document.querySelectorAll()  根据指定的选择器返回元素对象集合
+        console.log(document.querySelectorAll('.box')); //盒子1，盒子2
+
+    </script>
+</body>
+</html>

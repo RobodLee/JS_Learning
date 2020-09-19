@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>24-统计出现最多的字符和次数</title>
+    <script>
+        var str = 'fsdjflenflskjdfwioejfslkdjsfdsakdjdldgjlsfdj';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            if (o[str.charAt(i)]) {
+                o[str.charAt(i)]++;
+            } else {
+                o[str.charAt(i)] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        for (let key in o) {
+            max = Math.max(max,o[key]);
+        }
+        console.log(max);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

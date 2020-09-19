@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>12-仿京东显示隐藏密码</title>
+    <style>
+        .box{
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #cccccc;
+            margin: 100px auto;     /*居中*/
+        }
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;  /*不显示轮廓*/
+        }
+        .box button {
+            position: absolute;
+            top: 2px;
+            right: 15px;
+            width: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="pwd">
+            <button id="eye">哈</button>
+        </label>
+        <input type="password" name="" id="pwd">
+    </div>
+    <script>
+        var button = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        var flag = 0;
+        button.onclick = function () {
+            if (flag) {
+                console.log(flag);
+                pwd.type = 'password';
+                flag = 0;
+            } else {
+                console.log(flag);
+                flag = 1;
+                pwd.type = 'text';
+            }
+        }
+    </script>
+</body>
+</html>

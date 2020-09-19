@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>08-innerText和innerHtml的区别</title>
+</head>
+<body>
+    <div></div>
+    <p>
+        <span>呵呵呵</span>
+    </p>
+    <script>
+        var div = document.querySelector('div');
+        div.innerText = '<strong>哈哈哈哈哈</strong>'    //<strong>哈哈哈哈哈</strong>   innerText不识别html标签
+        div.innerHTML = '<strong>哈哈哈哈哈</strong>'    //页面显示加粗字体      innerHTML识别html标签
+
+        //这两个属性是可读写的，可以获取元素里面的内容
+        var p = document.querySelector('p');
+        console.log(p.innerText);   //呵呵呵                           innerText去除html元素，同时去除空格和换行
+        console.log(p.innerHTML);   //        <span>呵呵呵</span>      innerHTML保留html标签，保留空格和换行
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>12-检测是否为数组的方法</title>
+    <script>
+        //1. instanceof 运算符
+        var a = [1,2];
+        var b = {}
+        console.log(a instanceof Array);      //true
+        console.log(b instanceof Array);        //false
+
+        //2.Array.isArray(参数)
+        console.log(Array.isArray(a));          //true
+        console.log(Array.isArray(b));          //false
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>11-操作元素之表单属性设置</title>
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" value="输入内容">
+    <script>
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+        btn.onclick = function () {
+            //表单里面的值是通过value属性进行修改的
+            input.value = '呵呵呵';
+            //this指向的是函数的调用者 btn
+            this.disabled = true;
+        }
+    </script>
+</body>
+</html>
