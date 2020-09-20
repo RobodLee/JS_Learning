@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>16-显示隐藏文本框内容</title>
+    <style>
+        input {
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="手机">
+    <script>
+        var input = document.querySelector('input');
+        //onfocus获取焦点事件
+        input.onfocus = function () {
+            if (this.value === '手机') {
+                this.value = '';
+            }
+        }
+        //onblur失去焦点事件
+        input.onblur = function () {
+            if (this.value === '') {
+                this.value = '手机';
+            }
+        }
+    </script>
+</body>
+</html>

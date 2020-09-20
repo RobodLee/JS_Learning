@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>12-操作元素之修改样式属性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div);
+        div.onclick = function () {
+            div.style.height = '100px';                 //document.style.xxx修改的是行内式
+            div.style.width = '100px';
+            div.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>

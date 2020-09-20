@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>17-通过className更改元素样式</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>文本</div>
+    <script>
+        var div = document.querySelector('div')
+        div.onclick = function () {
+            //通过改变className属性来改变div的class为change，如果要保留原先的class，可以使用多类名选择器
+            div.className = 'change';
+            //div.className = 'first change'; //多类名
+        }
+    </script>
+</body>
+</html>

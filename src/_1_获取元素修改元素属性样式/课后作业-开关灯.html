@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>课后作业-开关灯</title>
+</head>
+<body>
+    <button id="btn">开关灯</button>
+    <script>
+        var btn = document.getElementById("btn");
+        var flag = 0;
+        btn.onclick = function () {
+            if (flag == 0) {
+                document.body.style.backgroundColor = "black";
+                flag = 1;
+            } else {
+                document.body.style.backgroundColor = "#fff";
+                flag = 0;
+            }
+        };
+    </script>
+</body>
+</body>
+</html>
