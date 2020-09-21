@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-创建和添加节点</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        var li = document.createElement('li');  //创建一个li
+        li.innerHTML = '娃哈哈';
+        var ul = document.querySelector('ul');  //获取ul
+        //node.appendChild()方法将节点添加到指定父节点的子节点列表末尾
+        ul.appendChild(li);     //将li添加到ul下
+        //node.insertBefore(child,指定元素)   将一个节点添加到父节点指定子节点的前面
+        var li2 = document.createElement('li');
+        ul.insertBefore(li2,li);
+
+    </script>
+</body>
+</html>

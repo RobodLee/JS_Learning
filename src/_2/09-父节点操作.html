@@ -8,9 +8,23 @@
     </style>
 </head>
 <body>
-$END$
+<!-- 节点的优点 -->
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<div class="demo">
+    <div class="box">
+        <span class="erweima">×</span>
+    </div>
+</div>
 <script>
-
+    var erweima = document.querySelector('.erweima');
+    console.log(erweima.parentNode);    //父节点box
 </script>
 </body>
 </html>

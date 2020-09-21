@@ -8,9 +8,35 @@
     </style>
 </head>
 <body>
-$END$
-<script>
+<!-- 节点的优点 -->
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
 
+</ul>
+<ol>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ol>
+
+<div class="demo">
+    <div class="box">
+        <span class="erweima">×</span>
+    </div>
+</div>
+
+<script>
+    var ul = document.querySelector('ul');
+    //element.childNodes 获取所有的子节点，包括文本节点，不常用
+    console.log(ul.childNodes);
+    //element.children 获取子元素节点
+    console.log(ul.children);
 </script>
 </body>
 </html>

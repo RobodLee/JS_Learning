@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <title>02-百度换肤效果</title>
     <style>
-
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url(images/1.jpg) no-repeat center top;
+        }
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+        li img {
+            width: 100px;
+        }
     </style>
 </head>
 <body>
-$END$
-<script>
+    <ul class="baidu">
+        <li><img src="images/1.jpg"></li>
+        <li><img src="images/2.jpg"></li>
+        <li><img src="images/3.jpg"></li>
+        <li><img src="images/4.jpg"></li>
+    </ul>
+    <script>
+        var lis = document.querySelector('.baidu').querySelectorAll('img');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onclick = function () {
+                document.body.style.backgroundImage = 'url('+this.src+')';
+            };
+        }
 
-</script>
+    </script>
 </body>
 </html>

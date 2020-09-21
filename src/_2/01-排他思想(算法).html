@@ -8,9 +8,22 @@
     </style>
 </head>
 <body>
-$END$
-<script>
-
-</script>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                for (let j = 0; j < btns.length; j++) {
+                    btns[j].style.backgroundColor = "";
+                }
+                this.style.backgroundColor = "pink";
+                console.log(this.innerText);
+            };
+        }
+    </script>
 </body>
 </html>

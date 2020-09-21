@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ch">
+
 <head>
     <meta charset="UTF-8">
     <title>13-兄弟节点</title>
@@ -7,10 +8,19 @@
 
     </style>
 </head>
-<body>
-$END$
-<script>
 
-</script>
+<body>
+    <div>div</div>
+    <span>span</span>
+    <script>
+        var div = document.querySelector('div');
+        //获取下一个和上一个子节点，包括文本节点
+        console.log(div.nextSibling);   
+        console.log(div.previousSibling);
+        //获取下一个和上一个元素节点
+        console.log(div.nextElementSibling);
+        console.log(div.previousElementSibling);
+    </script>
 </body>
+
 </html>
