@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>19-跟随鼠标的天使</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/angel.gif" alt="">
+<script>
+    var img = document.querySelector('img');
+    document.addEventListener('mousemove',function (e) {
+        let pageX = e.pageX;
+        let pageY = e.pageY;
+        img.style.left = pageX - 50 + 'px';
+        img.style.top = pageY - 40 + 'px';
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-节点操作之克隆节点</title>
+</head>
+<body>
+    <ul>
+       <li>1</li> 
+       <li>2</li> 
+       <li>3</li> 
+    </ul>
+    <script>
+        var li1 = document.querySelector('li');
+        var ul = document.querySelector('ul');
+        //cloneNode() 空格内不加内容或者为false的话就是浅拷贝，只克隆复制节点本身，不克隆里面的子节点
+        //ul.appendChild(li1.cloneNode());
+        //true表示深拷贝，复制节点本身以及里面所有的子节点
+        ul.appendChild(li1.cloneNode(true));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>09-注册事件两种方式</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="btn">按钮</button>
+<script>
+    var btn = document.getElementById('btn');
+    /**
+     * addEventListener()
+     * 参数1：事件类型，字符串，不用加on
+     * 参数2：事件处理方法，可以注册多个
+     */
+    //onClick()方法只能注册一个监听事件，重复注册就会覆盖
+    btn.addEventListener('click',function () {
+        alert('111');
+    });
+    btn.addEventListener('click',function () {
+        alert('222');
+    });
+    btn.addEventListener('click',function () {
+        alert('333');
+    });
+</script>
+</body>
+</html>
