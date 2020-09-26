@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>index2.html</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <span></span>
+<script>
+    var span = document.querySelector('span');
+    let search = location.search;
+    var param = search.substr(1);
+    var arr = param.split('=');
+    span.innerHTML = arr[1];
+</script>
+</body>
+</html>

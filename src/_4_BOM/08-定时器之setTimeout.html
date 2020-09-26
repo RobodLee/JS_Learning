@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>08-定时器之setTimeout</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    /**
+     * window.setTimeout(调用函数,[延迟的毫秒数])；
+     * window可省略，延迟的毫秒数省略的话就是立即执行
+     */
+    //1.直接写函数
+    window.setTimeout(function () {
+        console.log('hahahaha');
+    });
+
+    //2.写函数名
+    var time1 = setTimeout(time1111,2000);  //为了便于区分，可以为定时器起个名字，这里是time1
+    function time1111() {
+        console.log('time1111');
+    }
+
+    //3.采取字符串'函数名()',不提倡使用
+    setTimeout('time2222()',4000);
+    function time2222() {
+        console.log('time2222');
+    }
+
+</script>
+</body>
+</html>

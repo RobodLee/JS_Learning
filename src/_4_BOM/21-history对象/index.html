@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <a href="index2.html">跳转到index2</a>
+    <button>前进</button>
+<script>
+    /**
+     * history.go(参数)   1就是前进一个界面，-1就是后退一个页面
+     * @type {HTMLButtonElement}
+     */
+    var btn = document.querySelector('button');
+    btn.onclick = function () {
+        history.forward();  //前进
+    }
+</script>
+</body>
+</html>

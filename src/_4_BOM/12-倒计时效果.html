@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>12-倒计时效果</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+<script>
+    var hour = document.querySelector('.hour'); // 小时的黑色盒子
+    var minute = document.querySelector('.minute'); // 分钟的黑色盒子
+    var second = document.querySelector('.second'); // 秒数的黑色盒子
+    var inputTime = +new Date('2020-9-26 9:00:00');
+    countDown();
+
+    setInterval(countDown,1000);
+
+    function countDown() {
+        var now = +new Date();
+        var s = (inputTime - now) / 1000;
+        console.log(s);
+        var h = parseInt((s /60/60)%24);
+        hour.innerHTML = h;
+        var m = parseInt(s/60 %60);
+        minute.innerHTML = m;
+        var s = parseInt(s%60);
+        second.innerHTML = s;
+    }
+
+</script>
+</body>
+</html>
